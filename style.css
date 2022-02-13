@@ -100,7 +100,8 @@ main .options .option {
   overflow: hidden;
   min-width: 60px;
   margin: 10px;
-  background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+  background: var(--optionBackground);
+  background-color: #131313;
   background-size: auto 120%;
   background-position: center;
   cursor: pointer;
@@ -236,8 +237,8 @@ main .options .option .label .info .sub {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #222;
-    color: whitesmoke;
+    background: linear-gradient(90deg, #080808, #06070f, #040716, #02061d, #000624);
+    color: white;
   }
 
   h1 {
