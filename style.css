@@ -5,6 +5,12 @@
   --user-button-shadow: rgba(0, 0, 0, 0.1);
 }
 
+:focus-visible {
+  border: 3px solid white;
+  outline: none;
+  transition: 0s !important;
+}
+
 body {
   font-family: 'Inter var', system-ui, sans-serif;
 }
@@ -21,6 +27,14 @@ header {
 
 h1 {
   font-variation-settings: "wght" 400;
+}
+
+h1, h2 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 0;
 }
 
 main {
@@ -121,11 +135,12 @@ main .options .option.active {
   transform: scale(1);
   max-width: 600px;
   margin: 0px;
-  border-radius: 40px;
+  border-radius: 20px;
   background-size: auto 100%;
-  /*&:active {
-     transform:scale(0.9);
-  }*/
+}
+
+main .options .option.active:hover {
+    background-size: auto 105%;
 }
 
 main .options .option.active .shadow {
@@ -144,12 +159,11 @@ main .options .option.active .label .info>div {
 
 main .options .option:not(.active) {
   flex-grow: 1;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 main .options .option:not(.active) .shadow {
   bottom: -40px;
-  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
 }
 
 main .options .option:not(.active) .label {
@@ -194,13 +208,8 @@ main .options .option .label .material-icons-round {
 
 .material-icons-round {
   font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
+  user-select: none;
   font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
 }
 
 main .options .option .label .info {
