@@ -192,7 +192,7 @@ body {
   align-items: center;
   overflow: hidden;
   height: 100vh;
-  font-family: "Inter Var", sans-serif;
+  font-family: system-ui, sans-serif;
   transition: 0.25s;
 }
 
